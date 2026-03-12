@@ -18,6 +18,7 @@
   </head>
   <body>
     <canvas id="starsCanvas" aria-hidden="true"></canvas>
+    <div id="scrollProgress" aria-hidden="true"></div>
 
     <header class="topbar">
       <a class="brand" href="#top">Isha</a>
@@ -25,7 +26,6 @@
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#built">Built</a>
-        <a href="#interests">Interests</a>
         <a href="#skills">Skills</a>
       </nav>
     </header>
@@ -42,32 +42,27 @@
             <div class="hero-copy">
               <p class="eyebrow">CS & Business @ UW Seattle | Prev @ AWS</p>
               <h1>Hi, I'm <span>Isha Jagadish</span></h1>
-              <p class="hero-sub">Incoming Netflix intern. I build AI-forward products and scalable software systems.</p>
+              <p class="hero-sub">Incoming Netflix intern building AI-forward products and scalable systems.</p>
 
               <div class="badge-row">
                 <span class="badge hot">Incoming @ Netflix · Summer 2026</span>
                 <span class="badge">Saratoga, California</span>
-                <span class="badge">Open to SWE + AI roles</span>
               </div>
 
               <div class="cta-row">
-                <a class="btn solid" href="#built">What I've Built</a>
+                <a class="btn solid" href="#built">View Projects</a>
                 <a class="btn ghost" href="https://www.linkedin.com/in/isha-jagadish-01782b219/" target="_blank" rel="noreferrer">LinkedIn</a>
                 <a class="btn ghost" href="assets/Isha_Jagadish_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
               </div>
             </div>
           </div>
 
-          <div class="hero-visual" aria-hidden="true">
-            <div class="mesh-orb">
-              <span class="orb-core"></span>
-              <span class="orbit orbit-a"></span>
-              <span class="orbit orbit-b"></span>
-              <span class="orbit orbit-c"></span>
-              <span class="spark spark-a"></span>
-              <span class="spark spark-b"></span>
-              <span class="spark spark-c"></span>
+          <div class="hero-visual tilt-card" data-tilt>
+            <div class="photo-shell">
+              <img src="assets/isha-portrait.jpg" alt="Portrait of Isha Jagadish" />
             </div>
+            <div class="photo-glow"></div>
+            <div class="photo-ring"></div>
           </div>
         </div>
 
@@ -76,129 +71,133 @@
         </a>
       </section>
 
-      <section class="content-wrap stats" aria-label="Highlights">
-        <article class="glass-card stat tilt-card" data-tilt>
-          <p class="stat-label">LinkedIn Connections</p>
-          <p class="stat-value">500+</p>
+      <section class="content-wrap widget-grid section reveal">
+        <article class="glass-card widget tilt-card" data-tilt>
+          <p class="widget-label">NOW</p>
+          <p class="widget-value" id="clock">--:--:--</p>
+          <p class="widget-copy" id="rotator">Building. Learning. Shipping.</p>
         </article>
-        <article class="glass-card stat tilt-card" data-tilt>
-          <p class="stat-label">LinkedIn Followers</p>
-          <p class="stat-value">1,060</p>
+
+        <article class="glass-card widget tilt-card" data-tilt>
+          <p class="widget-label">FOCUS</p>
+          <div class="chip-grid compact" id="focusChips">
+            <span class="chip">AI Agents</span>
+            <span class="chip">Full-Stack</span>
+            <span class="chip">ML Systems</span>
+            <span class="chip">Product UX</span>
+          </div>
         </article>
-        <article class="glass-card stat tilt-card" data-tilt>
-          <p class="stat-label">Current Work</p>
-          <p class="stat-value stat-text">Research + TA @ Allen School</p>
+
+        <article class="glass-card widget tilt-card" data-tilt>
+          <p class="widget-label">QUICK LINKS</p>
+          <div class="quick-links">
+            <a href="https://github.com/ishajagadish" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/isha-jagadish-01782b219/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="assets/Isha_Jagadish_Resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
+          </div>
         </article>
       </section>
 
-      <section id="about" class="content-wrap section">
+      <section id="about" class="content-wrap section reveal">
         <article class="glass-card about-card tilt-card" data-tilt>
           <p class="eyebrow">About</p>
-          <h2>Builder mindset, research depth, product focus.</h2>
-          <p>
-            I'm a junior at the University of Washington studying Computer Science and Business. I enjoy solving hard
-            problems, building efficient full-stack systems, and turning AI ideas into practical products that people can
-            actually use.
-          </p>
+          <h2>Builder mindset. Research depth. Product focus.</h2>
+          <p>Junior at UW studying CS + Business, focused on turning AI ideas into practical software.</p>
         </article>
       </section>
 
-      <section id="experience" class="content-wrap section">
+      <section id="experience" class="content-wrap section reveal">
         <div class="section-head">
-          <p class="eyebrow">Past Experience</p>
+          <p class="eyebrow">Experience</p>
           <h2>Research, startups, and big-tech execution.</h2>
         </div>
 
         <div class="experience-grid">
           <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">Summer 2026</p>
-            <h3>Incoming Software Engineer Intern</h3>
+            <h3>Incoming SWE Intern</h3>
             <p class="exp-company">Netflix</p>
           </article>
 
           <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">Jun 2025 - Sep 2025</p>
             <h3>SDE Intern</h3>
-            <p class="exp-company">Amazon Web Services (DataFI)</p>
-            <p class="exp-note">Built SmartTrace: AI-agent automation for finance data explainability.</p>
+            <p class="exp-company">AWS (DataFI)</p>
+            <p class="exp-note">Built SmartTrace, an AI-agent explainability system.</p>
           </article>
 
           <article class="glass-card exp-card tilt-card" data-tilt>
-            <p class="exp-date">Sep 2025 - Present</p>
-            <h3>Undergraduate TA + Research Assistant</h3>
-            <p class="exp-company">Paul G. Allen School of CSE</p>
-            <p class="exp-note">CSE 484 TA, plus research in Mobile Intelligence + Makeability Labs.</p>
+            <p class="exp-date">2025 - Present</p>
+            <h3>TA + Research Assistant</h3>
+            <p class="exp-company">Allen School of CSE</p>
           </article>
 
           <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">Jun 2024 - Aug 2024</p>
             <h3>Software Engineer Intern</h3>
             <p class="exp-company">Inhabitr</p>
-            <p class="exp-note">Shipped NestJS APIs and React features for production SaaS workflows.</p>
           </article>
 
           <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">2022 - 2023</p>
             <h3>ML Intern</h3>
-            <p class="exp-company">Kodiak Sciences + UCLA Glanzman Lab</p>
-            <p class="exp-note">Protein sequence clustering and RNA/protein structure exploration.</p>
+            <p class="exp-company">Kodiak Sciences + UCLA</p>
           </article>
 
           <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">Leadership</p>
-            <h3>UW Junoon Choreography Captain</h3>
-            <p class="exp-company">University of Washington</p>
-            <p class="exp-note">Led 20+ dancers, choreography, teaching, and competition logistics.</p>
+            <h3>Choreography Captain</h3>
+            <p class="exp-company">UW Junoon</p>
           </article>
         </div>
       </section>
 
-      <section id="built" class="content-wrap section">
+      <section id="built" class="content-wrap section reveal">
         <div class="section-head">
-          <p class="eyebrow">What I've Built</p>
+          <p class="eyebrow">Built</p>
           <h2>AI, health, mobility, and product UX projects.</h2>
         </div>
 
         <div class="projects-grid">
           <article class="glass-card project-card tilt-card" data-tilt>
             <h3>SmartTrace (AWS)</h3>
-            <p>AI-agent architecture for finance data explainability with MCP tools and event-driven automation.</p>
+            <p>AI-agent automation for finance explainability workflows.</p>
             <div class="meta"><span>AI Agents</span><span>Backend</span></div>
           </article>
 
           <article class="glass-card project-card tilt-card" data-tilt>
             <h3>MusicMatch</h3>
-            <p>Spotify-based matching app that pairs people based on music taste overlap and profile affinity.</p>
+            <p>Spotify-based app that matches people by listening behavior.</p>
             <div class="meta"><span>Web</span><span>Frontend</span></div>
           </article>
 
           <article class="glass-card project-card tilt-card" data-tilt>
-            <h3>Optimizing Speed Limits with AI</h3>
-            <p>Neural network system for congestion-aware speed planning. Inrix hackathon honorable mention.</p>
+            <h3>Speed Limits + Congestion AI</h3>
+            <p>Neural model for congestion-aware speed planning.</p>
             <div class="meta"><span>ML</span><span>Transportation</span></div>
           </article>
 
           <article class="glass-card project-card tilt-card" data-tilt>
-            <h3>Parkinson's Progression Predictor</h3>
-            <p>Multistep ML pipeline using GWAS, symptoms, and gene expression for staged risk prediction.</p>
+            <h3>Parkinson's Predictor</h3>
+            <p>Multistep ML pipeline for staged risk prediction.</p>
             <div class="meta"><span>ML</span><span>Healthcare</span></div>
           </article>
 
           <article class="glass-card project-card tilt-card" data-tilt>
             <h3>Pneumonia X-ray Detection</h3>
-            <p>Built multiple computer vision models for medical image classification, including transfer learning.</p>
-            <div class="meta"><span>Computer Vision</span><span>Deep Learning</span></div>
+            <p>Computer vision models for medical image classification.</p>
+            <div class="meta"><span>CV</span><span>Deep Learning</span></div>
           </article>
 
           <article class="glass-card project-card tilt-card" data-tilt>
             <h3>Smart Assist</h3>
-            <p>Accessibility-focused wearable concept using computer vision, AI, and voice interaction.</p>
+            <p>Accessibility-focused wearable concept using AI + voice.</p>
             <div class="meta"><span>Accessibility</span><span>Applied AI</span></div>
           </article>
         </div>
       </section>
 
-      <section id="interests" class="content-wrap section split">
+      <section id="skills" class="content-wrap section split reveal">
         <article class="glass-card split-card tilt-card" data-tilt>
           <div class="section-head">
             <p class="eyebrow">Interests</p>
@@ -209,14 +208,12 @@
             <span class="chip">Machine Learning</span>
             <span class="chip">Scalable Backends</span>
             <span class="chip">Health Tech</span>
-            <span class="chip">Accessibility Tech</span>
             <span class="chip">Startup Building</span>
-            <span class="chip">Security</span>
             <span class="chip">Product Strategy</span>
           </div>
         </article>
 
-        <article id="skills" class="glass-card split-card tilt-card" data-tilt>
+        <article class="glass-card split-card tilt-card" data-tilt>
           <div class="section-head">
             <p class="eyebrow">Skills</p>
             <h2>Stack + toolkit.</h2>
@@ -231,12 +228,12 @@
               <p class="skill-copy">React, NestJS, Node.js, PostgreSQL</p>
             </div>
             <div>
-              <p class="skill-head">Cloud + Infra</p>
-              <p class="skill-copy">AWS, Lambda, SQS, EventBridge, API auth (SigV4)</p>
+              <p class="skill-head">Cloud</p>
+              <p class="skill-copy">AWS, Lambda, SQS, EventBridge</p>
             </div>
             <div>
-              <p class="skill-head">Focus Areas</p>
-              <p class="skill-copy">AI agents, full-stack systems, observability, performance</p>
+              <p class="skill-head">Focus</p>
+              <p class="skill-copy">AI agents, full-stack systems, observability</p>
             </div>
           </div>
         </article>
