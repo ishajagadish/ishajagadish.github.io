@@ -1,12 +1,127 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Your Name - Homepage</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isha Jagadish | Portfolio</title>
+    <meta
+      name="description"
+      content="Isha Jagadish - CS @ UW Seattle. Incoming Netflix intern (Summer 2026)."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  
   <body>
-    <h1>Hi, I'm Isha!</h1>  
-    
-    <p>Welcome to my website!</p> 
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+    <div class="ambient ambient-c"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#top">Isha</a>
+      <nav>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="https://www.linkedin.com/in/isha-jagadish-01782b219/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/ishajagadish" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top" class="page">
+      <section class="hero">
+        <article class="panel tilt-card" data-tilt>
+          <p class="eyebrow">CS @ UW Seattle</p>
+          <h1>Isha Jagadish</h1>
+          <p class="minimal">Building ML-powered products with clean UX.</p>
+
+          <div class="badge-row">
+            <span class="badge hot">Incoming @ Netflix · Summer 2026</span>
+            <span class="badge">AI + Systems</span>
+            <span class="badge">Product-minded Engineer</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn solid" href="#projects">View Work</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/isha-jagadish-01782b219/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </article>
+
+        <aside class="panel widget tilt-card" data-tilt>
+          <div class="orb-wrap">
+            <div class="ring ring-one"></div>
+            <div class="ring ring-two"></div>
+            <div class="ring ring-three"></div>
+            <div class="core"></div>
+          </div>
+          <div class="widget-copy">
+            <p class="widget-label">NOW</p>
+            <p class="widget-value" id="clock">--:--:--</p>
+            <p class="widget-rotator" id="rotator">Shipping, learning, iterating.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="stats" aria-label="Highlights">
+        <article class="panel stat tilt-card" data-tilt>
+          <p class="stat-label">Public Repos</p>
+          <p class="stat-value" id="statRepos">9</p>
+        </article>
+        <article class="panel stat tilt-card" data-tilt>
+          <p class="stat-label">GitHub Followers</p>
+          <p class="stat-value" id="statFollowers">1</p>
+        </article>
+        <article class="panel stat tilt-card" data-tilt>
+          <p class="stat-label">Current Focus</p>
+          <p class="stat-value stat-text">ML, backend, product UX</p>
+        </article>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2>Minimal + high impact.</h2>
+        </div>
+
+        <div class="experience-grid">
+          <article class="panel exp-card tilt-card" data-tilt>
+            <p class="exp-date">Summer 2026</p>
+            <h3>Incoming Software Engineer Intern</h3>
+            <p class="exp-company">Netflix</p>
+          </article>
+
+          <article class="panel exp-card tilt-card" data-tilt>
+            <p class="exp-date">Current</p>
+            <h3>Computer Science Student</h3>
+            <p class="exp-company">University of Washington, Seattle</p>
+          </article>
+
+          <article class="panel exp-card tilt-card" data-tilt>
+            <p class="exp-date">More</p>
+            <h3>Full timeline + updates</h3>
+            <p class="exp-company">
+              <a href="https://www.linkedin.com/in/isha-jagadish-01782b219/" target="_blank" rel="noreferrer">LinkedIn profile</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Projects</p>
+          <h2>Auto-synced from GitHub.</h2>
+        </div>
+        <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Isha Jagadish</p>
+    </footer>
+
+    <script src="js/app.js"></script>
   </body>
 </html>
