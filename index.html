@@ -17,13 +17,12 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="ambient ambient-a"></div>
-    <div class="ambient ambient-b"></div>
-    <div class="ambient ambient-c"></div>
+    <canvas id="starsCanvas" aria-hidden="true"></canvas>
 
     <header class="topbar">
       <a class="brand" href="#top">Isha</a>
       <nav>
+        <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#built">Built</a>
         <a href="#interests">Interests</a>
@@ -31,98 +30,113 @@
       </nav>
     </header>
 
-    <main id="top" class="page">
-      <section class="hero">
-        <article class="panel hero-card tilt-card" data-tilt>
-          <p class="eyebrow">CS & Business @ UW Seattle | Prev @ AWS</p>
-          <h1>Isha Jagadish</h1>
-          <p class="minimal">Incoming Netflix intern. I build AI-forward products and scalable backend systems.</p>
+    <main id="top">
+      <section class="hero-stage">
+        <div class="hero-grid">
+          <div class="hero-copy-wrap">
+            <div class="hero-accent" aria-hidden="true">
+              <span class="dot"></span>
+              <span class="line"></span>
+            </div>
 
-          <div class="badge-row">
-            <span class="badge hot">Incoming @ Netflix · Summer 2026</span>
-            <span class="badge">Saratoga, CA</span>
-            <span class="badge">Open to SWE + AI roles</span>
+            <div class="hero-copy">
+              <p class="eyebrow">CS & Business @ UW Seattle | Prev @ AWS</p>
+              <h1>Hi, I'm <span>Isha Jagadish</span></h1>
+              <p class="hero-sub">Incoming Netflix intern. I build AI-forward products and scalable software systems.</p>
+
+              <div class="badge-row">
+                <span class="badge hot">Incoming @ Netflix · Summer 2026</span>
+                <span class="badge">Saratoga, California</span>
+                <span class="badge">Open to SWE + AI roles</span>
+              </div>
+
+              <div class="cta-row">
+                <a class="btn solid" href="#built">What I've Built</a>
+                <a class="btn ghost" href="https://www.linkedin.com/in/isha-jagadish-01782b219/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a class="btn ghost" href="assets/Isha_Jagadish_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+              </div>
+            </div>
           </div>
 
-          <div class="cta-row">
-            <a class="btn solid" href="#built">What I've Built</a>
-            <a class="btn ghost" href="https://www.linkedin.com/in/isha-jagadish-01782b219/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn ghost" href="assets/Isha_Jagadish_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <div class="hero-visual">
+            <canvas id="heroCanvas" aria-hidden="true"></canvas>
           </div>
-        </article>
+        </div>
 
-        <aside class="panel widget tilt-card" data-tilt>
-          <div class="orb-wrap">
-            <div class="ring ring-one"></div>
-            <div class="ring ring-two"></div>
-            <div class="ring ring-three"></div>
-            <div class="core"></div>
-          </div>
-          <div class="widget-copy">
-            <p class="widget-label">CURRENT MODE</p>
-            <p class="widget-value" id="clock">--:--:--</p>
-            <p class="widget-rotator" id="rotator">AI agents, product thinking, fast execution.</p>
-          </div>
-        </aside>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to About section">
+          <span></span>
+        </a>
       </section>
 
-      <section class="stats" aria-label="Highlights">
-        <article class="panel stat tilt-card" data-tilt>
+      <section class="content-wrap stats" aria-label="Highlights">
+        <article class="glass-card stat tilt-card" data-tilt>
           <p class="stat-label">LinkedIn Connections</p>
           <p class="stat-value">500+</p>
         </article>
-        <article class="panel stat tilt-card" data-tilt>
+        <article class="glass-card stat tilt-card" data-tilt>
           <p class="stat-label">LinkedIn Followers</p>
           <p class="stat-value">1,060</p>
         </article>
-        <article class="panel stat tilt-card" data-tilt>
+        <article class="glass-card stat tilt-card" data-tilt>
           <p class="stat-label">Current Work</p>
           <p class="stat-value stat-text">Research + TA @ Allen School</p>
         </article>
       </section>
 
-      <section id="experience" class="section">
+      <section id="about" class="content-wrap section">
+        <article class="glass-card about-card tilt-card" data-tilt>
+          <p class="eyebrow">About</p>
+          <h2>Builder mindset, research depth, product focus.</h2>
+          <p>
+            I'm a junior at the University of Washington studying Computer Science and Business. I enjoy solving hard
+            problems, building efficient full-stack systems, and turning AI ideas into practical products that people can
+            actually use.
+          </p>
+        </article>
+      </section>
+
+      <section id="experience" class="content-wrap section">
         <div class="section-head">
           <p class="eyebrow">Past Experience</p>
-          <h2>Hands-on across research, startups, and big tech.</h2>
+          <h2>Research, startups, and big-tech execution.</h2>
         </div>
 
         <div class="experience-grid">
-          <article class="panel exp-card tilt-card" data-tilt>
+          <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">Summer 2026</p>
             <h3>Incoming Software Engineer Intern</h3>
             <p class="exp-company">Netflix</p>
           </article>
 
-          <article class="panel exp-card tilt-card" data-tilt>
+          <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">Jun 2025 - Sep 2025</p>
             <h3>SDE Intern</h3>
             <p class="exp-company">Amazon Web Services (DataFI)</p>
-            <p class="exp-note">Built SmartTrace: an AI-agent system for finance data explainability.</p>
+            <p class="exp-note">Built SmartTrace: AI-agent automation for finance data explainability.</p>
           </article>
 
-          <article class="panel exp-card tilt-card" data-tilt>
+          <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">Sep 2025 - Present</p>
             <h3>Undergraduate TA + Research Assistant</h3>
             <p class="exp-company">Paul G. Allen School of CSE</p>
-            <p class="exp-note">CSE 484 TA. Research in Mobile Intelligence + Makeability Labs.</p>
+            <p class="exp-note">CSE 484 TA, plus research in Mobile Intelligence + Makeability Labs.</p>
           </article>
 
-          <article class="panel exp-card tilt-card" data-tilt>
+          <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">Jun 2024 - Aug 2024</p>
             <h3>Software Engineer Intern</h3>
             <p class="exp-company">Inhabitr</p>
-            <p class="exp-note">Shipped NestJS APIs + React features for production SaaS workflows.</p>
+            <p class="exp-note">Shipped NestJS APIs and React features for production SaaS workflows.</p>
           </article>
 
-          <article class="panel exp-card tilt-card" data-tilt>
+          <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">2022 - 2023</p>
             <h3>ML Intern</h3>
             <p class="exp-company">Kodiak Sciences + UCLA Glanzman Lab</p>
             <p class="exp-note">Protein sequence clustering and RNA/protein structure exploration.</p>
           </article>
 
-          <article class="panel exp-card tilt-card" data-tilt>
+          <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">Leadership</p>
             <h3>UW Junoon Choreography Captain</h3>
             <p class="exp-company">University of Washington</p>
@@ -131,44 +145,44 @@
         </div>
       </section>
 
-      <section id="built" class="section">
+      <section id="built" class="content-wrap section">
         <div class="section-head">
           <p class="eyebrow">What I've Built</p>
-          <h2>Projects across AI, health, mobility, and product UX.</h2>
+          <h2>AI, health, mobility, and product UX projects.</h2>
         </div>
 
         <div class="projects-grid">
-          <article class="project-card tilt-card" data-tilt>
+          <article class="glass-card project-card tilt-card" data-tilt>
             <h3>SmartTrace (AWS)</h3>
             <p>AI-agent architecture for finance data explainability with MCP tools and event-driven automation.</p>
             <div class="meta"><span>AI Agents</span><span>Backend</span></div>
           </article>
 
-          <article class="project-card tilt-card" data-tilt>
+          <article class="glass-card project-card tilt-card" data-tilt>
             <h3>MusicMatch</h3>
             <p>Spotify-based matching app that pairs people based on music taste overlap and profile affinity.</p>
             <div class="meta"><span>Web</span><span>Frontend</span></div>
           </article>
 
-          <article class="project-card tilt-card" data-tilt>
+          <article class="glass-card project-card tilt-card" data-tilt>
             <h3>Optimizing Speed Limits with AI</h3>
             <p>Neural network system for congestion-aware speed planning. Inrix hackathon honorable mention.</p>
             <div class="meta"><span>ML</span><span>Transportation</span></div>
           </article>
 
-          <article class="project-card tilt-card" data-tilt>
+          <article class="glass-card project-card tilt-card" data-tilt>
             <h3>Parkinson's Progression Predictor</h3>
             <p>Multistep ML pipeline using GWAS, symptoms, and gene expression for staged risk prediction.</p>
             <div class="meta"><span>ML</span><span>Healthcare</span></div>
           </article>
 
-          <article class="project-card tilt-card" data-tilt>
+          <article class="glass-card project-card tilt-card" data-tilt>
             <h3>Pneumonia X-ray Detection</h3>
             <p>Built multiple computer vision models for medical image classification, including transfer learning.</p>
             <div class="meta"><span>Computer Vision</span><span>Deep Learning</span></div>
           </article>
 
-          <article class="project-card tilt-card" data-tilt>
+          <article class="glass-card project-card tilt-card" data-tilt>
             <h3>Smart Assist</h3>
             <p>Accessibility-focused wearable concept using computer vision, AI, and voice interaction.</p>
             <div class="meta"><span>Accessibility</span><span>Applied AI</span></div>
@@ -176,8 +190,8 @@
         </div>
       </section>
 
-      <section id="interests" class="section split">
-        <article class="panel split-card tilt-card" data-tilt>
+      <section id="interests" class="content-wrap section split">
+        <article class="glass-card split-card tilt-card" data-tilt>
           <div class="section-head">
             <p class="eyebrow">Interests</p>
             <h2>What I care about.</h2>
@@ -194,7 +208,7 @@
           </div>
         </article>
 
-        <article id="skills" class="panel split-card tilt-card" data-tilt>
+        <article id="skills" class="glass-card split-card tilt-card" data-tilt>
           <div class="section-head">
             <p class="eyebrow">Skills</p>
             <h2>Stack + toolkit.</h2>
@@ -221,10 +235,10 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="content-wrap footer">
       <p>© <span id="year"></span> Isha Jagadish</p>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
