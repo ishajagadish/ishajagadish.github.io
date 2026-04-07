@@ -16,15 +16,15 @@ function initStarsBackground() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
     stars.length = 0;
-    const count = Math.floor((window.innerWidth * window.innerHeight) / 12000);
+    const count = Math.floor((window.innerWidth * window.innerHeight) / 11000);
 
     for (let i = 0; i < count; i += 1) {
       stars.push({
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
-        r: Math.random() * 1.4 + 0.2,
-        v: Math.random() * 0.12 + 0.02,
-        a: Math.random() * 0.45 + 0.18
+        r: Math.random() * 1.5 + 0.2,
+        v: Math.random() * 0.14 + 0.02,
+        a: Math.random() * 0.46 + 0.2
       });
     }
   };
@@ -91,7 +91,7 @@ function initRotator() {
   const lines = [
     "Building. Learning. Shipping.",
     "AI agents + full-stack systems.",
-    "Fast iteration, clean execution."
+    "Research informed. Product minded."
   ];
 
   let idx = 0;
@@ -137,6 +137,67 @@ function attachTilt() {
   });
 }
 
+function initHeroParallax() {
+  const scene = document.getElementById("orbitScene");
+  if (!scene) return;
+
+  const layers = scene.querySelectorAll(".orbit-layer, .photo-shell, .float-card");
+
+  const reset = () => {
+    layers.forEach((layer) => {
+      layer.style.transform = "";
+    });
+  };
+
+  scene.addEventListener("mousemove", (event) => {
+    const rect = scene.getBoundingClientRect();
+    const px = (event.clientX - rect.left) / rect.width - 0.5;
+    const py = (event.clientY - rect.top) / rect.height - 0.5;
+
+    layers.forEach((layer, idx) => {
+      const depth = (idx + 1) * 4;
+      const x = px * depth;
+      const y = py * depth;
+      if (layer.classList.contains("photo-shell")) {
+        layer.style.transform = `translate3d(${x}px, ${y}px, 0) rotateY(${-px * 10}deg) rotateX(${py * 8}deg)`;
+      } else {
+        layer.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      }
+    });
+  });
+
+  scene.addEventListener("mouseleave", reset);
+}
+
+function initCursorGlow() {
+  const glow = document.getElementById("cursorGlow");
+  if (!glow) return;
+  if (window.matchMedia("(pointer: coarse)").matches) return;
+
+  window.addEventListener(
+    "mousemove",
+    (event) => {
+      glow.style.left = `${event.clientX}px`;
+      glow.style.top = `${event.clientY}px`;
+    },
+    { passive: true }
+  );
+}
+
+function initSignalBars() {
+  const bars = Array.from(document.querySelectorAll("#signalBars span"));
+  if (!bars.length) return;
+
+  const randomize = () => {
+    bars.forEach((bar) => {
+      const level = Math.floor(Math.random() * 50) + 35;
+      bar.style.setProperty("--level", `${level}%`);
+    });
+  };
+
+  setInterval(randomize, 900);
+}
+
 function initReveal() {
   const items = document.querySelectorAll(".reveal");
   if (!items.length) return;
@@ -167,5 +228,8 @@ initClock();
 initRotator();
 initFocusChipShuffle();
 attachTilt();
+initHeroParallax();
+initCursorGlow();
+initSignalBars();
 initReveal();
 setYear();

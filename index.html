@@ -14,19 +14,21 @@
       href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css?v=20260312c" />
+    <link rel="stylesheet" href="css/style.css?v=20260402d" />
   </head>
   <body>
     <canvas id="starsCanvas" aria-hidden="true"></canvas>
     <div id="scrollProgress" aria-hidden="true"></div>
+    <div id="cursorGlow" aria-hidden="true"></div>
 
     <header class="topbar">
       <a class="brand" href="#top">Isha</a>
       <nav>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#built">Built</a>
-        <a href="#skills">Skills</a>
+        <a href="#research">Research + TA</a>
+        <a href="#awards">Awards</a>
+        <a href="#projects">Projects</a>
       </nav>
     </header>
 
@@ -40,32 +42,38 @@
             </div>
 
             <div class="hero-copy">
-              <p class="eyebrow">CS & Business @ UW Seattle | Prev @ AWS</p>
-              <h1>Hi, I'm <span>Isha Jagadish</span></h1>
-              <p class="hero-sub">Incoming Netflix intern building AI-forward products and scalable systems.</p>
+              <p class="eyebrow">CS + Business @ UW Seattle | Prev @ AWS</p>
+              <h1>Building AI systems that feel <span>practical and human</span></h1>
+              <p class="hero-sub">
+                Hi, I'm Isha! I am currently a junior at the University of Washington studying Computer Science and Business, with a strong foundation in programming and full-stack development. I’m passionate about solving complex problems and building efficient, scalable software solutions.
+              </p>
 
               <div class="badge-row">
-                <span class="badge hot">Incoming @ Netflix · Summer 2026</span>
-                <span class="badge">Saratoga, California</span>
+                <span class="badge hot">Incoming SWE Intern @ Netflix · Summer 2026</span>
+                <span class="badge">Seattle / Bay Area</span>
               </div>
 
               <div class="cta-row">
-                <a class="btn solid" href="#built">View Projects</a>
+                <a class="btn solid" href="#projects">View Projects</a>
                 <a class="btn ghost" href="https://www.linkedin.com/in/isha-jagadish-01782b219/" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a class="btn ghost" href="assets/Isha_Jagadish_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+                <a class="btn ghost" href="https://github.com/ishajagadish" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </div>
           </div>
 
-          <div class="hero-visual tilt-card" data-tilt>
-            <div class="photo-shell">
-              <img src="assets/isha-portrait.jpg" alt="Portrait of Isha Jagadish" />
+          <div class="hero-visual tilt-card" data-tilt id="orbitScene">
+            <div class="orbit-core">
+              <div class="orbit-layer layer-a"></div>
+              <div class="orbit-layer layer-b"></div>
+              <div class="orbit-layer layer-c"></div>
+              <div class="photo-shell">
+                <img src="assets/isha-portrait.jpg" alt="Portrait of Isha Jagadish" />
+              </div>
             </div>
             <div class="float-card float-a">AI + Product</div>
-            <div class="float-card float-b">UW · CS + Business</div>
-            <div class="float-card float-c">Incoming @ Netflix</div>
+            <div class="float-card float-b">UW CSE + Foster</div>
+            <div class="float-card float-c">Research + Systems</div>
             <div class="photo-glow"></div>
-            <div class="photo-ring"></div>
           </div>
         </div>
 
@@ -87,7 +95,7 @@
             <span class="chip">AI Agents</span>
             <span class="chip">Full-Stack</span>
             <span class="chip">ML Systems</span>
-            <span class="chip">Product UX</span>
+            <span class="chip">Security</span>
           </div>
         </article>
 
@@ -96,106 +104,186 @@
           <div class="quick-links">
             <a href="https://github.com/ishajagadish" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/isha-jagadish-01782b219/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="assets/Isha_Jagadish_Resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
+            <a href="https://www.aspirations.org/news/award-programs/ncwit-selects-2026-aic-collegiate-award-finalists" target="_blank" rel="noreferrer">NCWIT Award</a>
           </div>
+        </article>
+
+        <article class="glass-card widget widget-signal tilt-card" data-tilt>
+          <p class="widget-label">BUILD SIGNAL</p>
+          <div class="signal-bars" id="signalBars" aria-hidden="true">
+            <span style="--level: 55%"></span>
+            <span style="--level: 75%"></span>
+            <span style="--level: 45%"></span>
+            <span style="--level: 82%"></span>
+            <span style="--level: 68%"></span>
+          </div>
+          <p class="widget-copy">Shipping AI + backend features with fast iteration loops.</p>
         </article>
       </section>
 
       <section id="about" class="content-wrap section reveal">
         <article class="glass-card about-card tilt-card" data-tilt>
           <p class="eyebrow">About</p>
-          <h2>Builder mindset. Research depth. Product focus.</h2>
-          <p>Junior at UW studying CS + Business, focused on turning AI ideas into practical software.</p>
+          <h2>Builder mindset with research depth.</h2>
+          <p>
+            I enjoy moving from ambiguous ideas to shipped systems, especially where AI,
+            backend architecture, and real user workflows intersect.
+          </p>
         </article>
       </section>
 
       <section id="experience" class="content-wrap section reveal">
         <div class="section-head">
           <p class="eyebrow">Experience</p>
-          <h2>Research, startups, big-tech execution.</h2>
+          <h2>Industry work and production-focused execution.</h2>
         </div>
 
         <div class="experience-grid">
           <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">Summer 2026</p>
-            <h3>Incoming SWE Intern</h3>
+            <h3>Software Engineering Intern</h3>
             <p class="exp-company">Netflix</p>
+            <p class="exp-note">
+              Incoming Software Engineering Intern on the Live Streaming Pipeline team.
+            </p>
           </article>
 
           <article class="glass-card exp-card tilt-card" data-tilt>
             <p class="exp-date">Jun 2025 - Sep 2025</p>
-            <h3>SDE Intern</h3>
-            <p class="exp-company">AWS (DataFI)</p>
-            <p class="exp-note">Built SmartTrace, an AI-agent explainability system.</p>
-          </article>
-
-          <article class="glass-card exp-card tilt-card" data-tilt>
-            <p class="exp-date">2025 - Present</p>
-            <h3>TA + Research Assistant</h3>
-            <p class="exp-company">Allen School of CSE</p>
-          </article>
-
-          <article class="glass-card exp-card tilt-card" data-tilt>
-            <p class="exp-date">Jun 2024 - Aug 2024</p>
-            <h3>Software Engineer Intern</h3>
-            <p class="exp-company">Inhabitr</p>
-          </article>
-
-          <article class="glass-card exp-card tilt-card" data-tilt>
-            <p class="exp-date">2022 - 2023</p>
-            <h3>ML Intern</h3>
-            <p class="exp-company">Kodiak Sciences + UCLA</p>
-          </article>
-
-          <article class="glass-card exp-card tilt-card" data-tilt>
-            <p class="exp-date">Leadership</p>
-            <h3>Choreography Captain</h3>
-            <p class="exp-company">UW Junoon</p>
+            <h3>Software Development Engineer Intern</h3>
+            <p class="exp-company">AWS Finance Technology (DataFI)</p>
+            <ul class="exp-note">
+              <li>Designed SmartTrace, an AI agent system using Strands, and built a custom MCP server, deployed via AWS AgentCore</li>
+              <li>Automated financial data lineage tracing with explainable root cause analysis, reducing data investigation time by 80%</li>
+              <li>Integrated the AI agent with the existing internal ticketing system to automatically respond to customer tickets</li>
+              <li>Improved reliability with logging, error handling, and observability</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <section id="built" class="content-wrap section reveal">
+      <section id="research" class="content-wrap section reveal">
         <div class="section-head">
-          <p class="eyebrow">Built</p>
-          <h2>Selected projects.</h2>
+          <p class="eyebrow">Research + Teaching</p>
+          <h2>Paul G. Allen School of Computer Science &amp; Engineering</h2>
+        </div>
+
+        <div class="experience-grid">
+          <article class="glass-card exp-card tilt-card" data-tilt>
+            <p class="exp-date">Feb 2026 - Present</p>
+            <h3>Undergraduate Research Assistant</h3>
+            <p class="exp-company">Mobile Intelligence Lab</p>
+            <p class="exp-note">Working on Proactive Hearing Agents in the Mobile Intelligence Lab. Built and deployed a FastSpeech2 + HiFi-GAN text-to-speech API with queuing and low-latency audio streaming.</p>
+          </article>
+
+          <article class="glass-card exp-card tilt-card" data-tilt>
+            <p class="exp-date">Sep 2025 - Present</p>
+            <h3>Undergraduate Research Assistant</h3>
+            <p class="exp-company">Makeability Lab</p>
+            <p class="exp-note">Implementing full-stack features and evaluating ML models to improve accessibility annotations in Project Sidewalk.</p>
+          </article>
+
+          <article class="glass-card exp-card tilt-card" data-tilt>
+            <p class="exp-date">Sep 2025 - Mar 2026</p>
+            <h3>Undergraduate Teaching Assistant</h3>
+            <p class="exp-company">Computer Security (CSE 484)</p>
+            <p class="exp-note">Lead weekly sections, guide students in office hours, and grade buffer overflows, cryptography, and web security labs.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="awards" class="content-wrap section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Awards</p>
+          <h2>Recognition and scholarships.</h2>
         </div>
 
         <div class="projects-grid">
           <article class="glass-card project-card tilt-card" data-tilt>
-            <h3>SmartTrace (AWS)</h3>
-            <p>AI-agent automation for finance explainability workflows.</p>
-            <div class="meta"><span>AI Agents</span><span>Backend</span></div>
+            <h3>NCWIT AiC Collegiate Award Finalist</h3>
+            <p>Issued by NCWIT, Jan 2026. Finalist selected for innovation and technical impact.</p>
+            <div class="meta"><span>University of Washington</span><a class="meta-link" href="https://www.aspirations.org/news/award-programs/ncwit-selects-2026-aic-collegiate-award-finalists" target="_blank" rel="noreferrer">Announcement</a></div>
           </article>
 
           <article class="glass-card project-card tilt-card" data-tilt>
-            <h3>MusicMatch</h3>
-            <p>Spotify-based app that matches people by listening behavior.</p>
-            <div class="meta"><span>Web</span><span>Frontend</span></div>
+            <h3>Kyril Faenov Endowed Scholarship</h3>
+            <p>Issued by UW College of Engineering, Jul 2025 for excellence in CSE.</p>
+            <div class="meta"><span>University of Washington</span><span>2025</span></div>
           </article>
 
           <article class="glass-card project-card tilt-card" data-tilt>
-            <h3>Speed Limits + Congestion AI</h3>
-            <p>Neural model for congestion-aware speed planning.</p>
-            <div class="meta"><span>ML</span><span>Transportation</span></div>
+            <h3>Honorable Mention</h3>
+            <p>INRIX Amazon University Hackathon, Dec 2023.</p>
+            <div class="meta"><span>Hackathon</span><span>2023</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="content-wrap section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Featured</p>
+          <h2>Selected Projects</h2>
+        </div>
+
+        <div class="projects-timeline">
+          <article class="timeline-item left">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <div class="glass-card timeline-card">
+              <p class="timeline-date">May 2025</p>
+              <h3>MNIST Neural Network Classifier from Scratch</h3>
+              <p>Built MNIST classifiers in PyTorch from low-level functions, manually implementing initialization, forward pass, and training loop while comparing deep vs. wide architectures.</p>
+              <div class="meta"><span>PyTorch · Neural Networks</span></div>
+            </div>
           </article>
 
-          <article class="glass-card project-card tilt-card" data-tilt>
-            <h3>Parkinson's Predictor</h3>
-            <p>Multistep ML pipeline for staged risk prediction.</p>
-            <div class="meta"><span>ML</span><span>Healthcare</span></div>
+          <article class="timeline-item right">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <div class="glass-card timeline-card">
+              <p class="timeline-date">Dec 2023</p>
+              <h3>AI-Powered System for Optimizing Speed Limits and Congestion</h3>
+              <p>Built a neural model to optimize speed limits and reduce congestion, with extensions for broader infrastructure planning.</p>
+              <div class="meta"><span>University of Washington · INRIX Amazon Hackathon Honorable Mention</span></div>
+            </div>
           </article>
 
-          <article class="glass-card project-card tilt-card" data-tilt>
-            <h3>Pneumonia X-ray Detection</h3>
-            <p>Computer vision models for medical image classification.</p>
-            <div class="meta"><span>CV</span><span>Deep Learning</span></div>
+          <article class="timeline-item left">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <div class="glass-card timeline-card">
+              <p class="timeline-date">Jan 2021 - Mar 2021</p>
+              <h3>A Multistep ML Predictor of Parkinson's Disease Progression</h3>
+              <p>Created a staged predictor using GWAS, symptoms, and gene expression data to estimate Parkinson's risk and stage more cost-effectively.</p>
+              <div class="meta"><span>Synopsys Science Fair · Machine Learning</span></div>
+            </div>
           </article>
 
-          <article class="glass-card project-card tilt-card" data-tilt>
-            <h3>Smart Assist</h3>
-            <p>Accessibility-focused wearable concept using AI + voice.</p>
-            <div class="meta"><span>Accessibility</span><span>Applied AI</span></div>
+          <article class="timeline-item right">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <div class="glass-card timeline-card">
+              <p class="timeline-date">Jun 2020 - Jul 2020</p>
+              <h3>Using AI to Detect Pneumonia in Chest X-Rays</h3>
+              <p>Trained multiple machine learning models to classify chest X-rays as healthy or pneumonia-positive.</p>
+              <div class="meta"><span>Inspirit AI · Machine Learning</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item left">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <div class="glass-card timeline-card">
+              <p class="timeline-date">Jan 2020 - Mar 2020</p>
+              <h3>Smart Assist: Wearable Awareness for the Visually Impaired</h3>
+              <p>Designed a voice-driven computer vision assistant that detects nearby obstacles and alerts visually impaired users in real time.</p>
+              <div class="meta"><span>Synopsys Science Fair Honorable Mention · Accessibility AI</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item right">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <div class="glass-card timeline-card">
+              <p class="timeline-date">Jan 2019 - Mar 2019</p>
+              <h3>Identifying Polygenic Disease Risk Across Ethnic Populations</h3>
+              <p>Analyzed disease susceptibility patterns across ethnic super populations and received a first-place STEM special award.</p>
+              <div class="meta"><span>Synopsys Special Award · Computational Biology</span></div>
+            </div>
           </article>
         </div>
       </section>
@@ -210,8 +298,8 @@
             <span class="chip">AI Agents</span>
             <span class="chip">Machine Learning</span>
             <span class="chip">Scalable Backends</span>
+            <span class="chip">Security</span>
             <span class="chip">Health Tech</span>
-            <span class="chip">Startup Building</span>
             <span class="chip">Product Strategy</span>
           </div>
         </article>
@@ -228,11 +316,11 @@
             </div>
             <div>
               <p class="skill-head">Frameworks</p>
-              <p class="skill-copy">React, NestJS, Node.js, PostgreSQL</p>
+              <p class="skill-copy">React, Node.js, NestJS, PostgreSQL</p>
             </div>
             <div>
               <p class="skill-head">Cloud</p>
-              <p class="skill-copy">AWS, Lambda, SQS, EventBridge</p>
+              <p class="skill-copy">AWS, Lambda, EventBridge, SQS</p>
             </div>
             <div>
               <p class="skill-head">Focus</p>
@@ -247,6 +335,6 @@
       <p>© <span id="year"></span> Isha Jagadish</p>
     </footer>
 
-    <script src="js/app.js?v=20260312c"></script>
+    <script src="js/app.js?v=20260402d"></script>
   </body>
 </html>
